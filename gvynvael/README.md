@@ -40,4 +40,9 @@ Content-Length: 26
 
 # Level 5
 
-TBD
+Solution: Similiar to level 4 but a bit harder. Have to abuse the fact that querystring (body-parser urlencoded(extended:false)) will auto un-gzip a payload. This is tricky if using Burp as there's no easy way to send a gzipped payload. This is one of Burp's biggest downfalls.
+
+```
+echo -n 'secret=ShowMeTheFlag' | gzip|curl challenges.gynvael.stream:5005/flag -H 'Content-Encoding: gzip' --data-binary @-
+
+```

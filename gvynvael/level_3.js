@@ -1,4 +1,4 @@
-Level 3
+//Level 3
 
 // IMPORTANT NOTE:
 // The secret flag you need to find is in the path name of this JavaScript file.

@@ -1,4 +1,4 @@
-Level 5
+//Level 5
 
 const http = require('http')
 const express = require('express')
@@ -41,7 +41,9 @@ const proxy = function(req, res) {
   req.youAreBanned = false
   let body = ''
   req
-    .prependListener('data', (data) => { body += data })
+    .prependListener('data', (data) => { 
+        body += data 
+    })
     .prependListener('end', () => {
       const o = new URLSearchParams(body)
       req.youAreBanned = o.toString().includes("ShowMeTheFlag")

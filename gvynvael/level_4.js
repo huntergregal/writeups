@@ -1,4 +1,4 @@
-Level 4
+//Level 4
 
 const express = require('express')
 const fs = require('fs')
@@ -23,6 +23,7 @@ app.use(express.text({
 app.post('/flag', (req, res) => {
   res.statusCode = 200
   res.setHeader('Content-Type', 'text/plain;charset=utf-8')
+
   if ((typeof req.body) !== 'string') {
     res.end("What?")
     return
