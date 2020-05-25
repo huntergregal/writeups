@@ -46,3 +46,11 @@ Solution: Similiar to level 4 but a bit harder. Have to abuse the fact that quer
 echo -n 'secret=ShowMeTheFlag' | gzip|curl challenges.gynvael.stream:5005/flag -H 'Content-Encoding: gzip' --data-binary @-
 
 ```
+
+# Level 6
+
+Solution: (this chal may be broken?) - just send '<undefined>' as secret2
+
+```
+curl 'http://challenges.gynvael.stream:5006/flag?secret1=pwndt&secret2=<undefined>'
+```
